@@ -47,13 +47,13 @@ header .container {
 }
 
 #header-logo {
-    height: 50px; /* Adjust as needed */
+    height: 70px; /* Increased logo height */
     margin-right: 15px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* Assuming this might be displayed or affects spacing */
     /* If the logo image contains the name, this h1 can be hidden: */
     /* display: none; */
 }
@@ -82,7 +82,7 @@ header nav ul li a:hover {
 
 /* Main Content Area */
 main {
-    padding-top: 80px; /* Adjust based on header height */
+    padding-top: 110px; /* Adjusted for taller header */
 }
 
 main section {
@@ -102,6 +102,10 @@ main section h2 {
 }
 
 /* About Us Section / A Better Rebar Solution */
+#about h2 { /* Override general section h2 styling */
+    text-align: left;
+}
+
 .about-content {
     display: flex;
     align-items: center;
@@ -180,17 +184,14 @@ footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 40px 0;
+    padding: 20px 0; /* Reduced padding for a smaller footer bar */
 }
 
-footer h2 {
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-}
+/* Removed footer h2 as it's no longer in the footer */
 
 footer p {
-    margin-bottom: 10px;
-    font-size: 1rem;
+    margin: 0; /* Remove default margins for a compact look */
+    font-size: 0.9rem; /* Slightly smaller font for copyright */
 }
 
 /* Responsive Adjustments */
@@ -212,7 +213,7 @@ footer p {
     }
 
     main {
-        padding-top: 120px; /* Adjust for taller header on mobile */
+        padding-top: 150px; /* Adjusted for taller header on mobile */
     }
 
     .container {
