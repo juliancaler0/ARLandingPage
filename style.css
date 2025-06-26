@@ -77,7 +77,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #007bff;
+    color: #555555; /* Dark gray hover for nav links */
 }
 
 /* Main Content Area */
@@ -87,18 +87,20 @@ main {
 
 main section {
     padding: 60px 0;
-    border-bottom: 1px solid #eee;
+    /* border-bottom: 1px solid #eee; */ /* Removed for cleaner look with alternating backgrounds */
 }
 
-main section:last-child {
-    border-bottom: none;
-}
+/* main section:last-child { */ /* No longer needed if all borders are removed */
+    /* border-bottom: none; */
+/* } */
 
 main section h2 {
     text-align: center;
     margin-bottom: 40px;
     font-size: 2.5rem;
     color: #333;
+    font-weight: 600; /* Slightly lighter than default bold, or more defined */
+    letter-spacing: 0.5px; /* Added for a more refined look */
 }
 
 /* About Us Section / A Better Rebar Solution */
@@ -221,58 +223,67 @@ footer p {
 .contact-form textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    background-color: #f8f9fa; /* Very light grey background */
+    border: 1px solid #e0e0e0; /* Subtle border */
+    border-radius: 4px; /* Keep slight rounding for a soft look */
     font-size: 1rem;
     font-family: inherit;
     line-height: 1.5;
+    color: #333333; /* Darker text for readability */
 }
 
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    border-color: #aaaaaa; /* Darker grey border on focus */
+    background-color: #ffffff; /* Optionally change background to white on focus */
+    box-shadow: 0 0 5px rgba(0,0,0,0.1); /* Subtle shadow focus */
 }
 
 .contact-form textarea {
     resize: vertical;
 }
 
-.contact-form .btn {
+.contact-form .btn, /* Apply to contact button */
+.gallery-view-all .btn { /* Apply to gallery button */
     display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 12px 25px;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    padding: 15px 30px; /* Adjusted padding */
     border: none;
-    border-radius: 4px;
+    border-radius: 30px; /* Rounded corners */
     font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: bold; /* Keeping bold for now, can adjust */
+    text-transform: none; /* Removed uppercase */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* Ensure no underline if used as <a> */
 }
 
-.contact-form .btn:hover {
-    background-color: #0056b3;
+.contact-form .btn:hover,
+.gallery-view-all .btn:hover {
+    background-color: #333333; /* Slightly lighter black on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
 }
 
-/* Gallery View All Button Styles */
-.gallery-view-all {
-    text-align: center;
-    margin-top: 40px; /* Space above the button */
-}
-
-.btn-secondary { /* Specific style for gallery button if different from primary */
-    background-color: #6c757d; /* A common secondary button color */
+/* Remove specific .btn-secondary styles as .btn is now globally black */
+/* No longer needed:
+.btn-secondary {
+    background-color: #6c757d;
     color: #fff;
 }
 
 .btn-secondary:hover {
     background-color: #5a6268;
 }
+*/
 
+/* Gallery View All Button Styles */
+.gallery-view-all {
+    text-align: center;
+    margin-top: 40px; /* Space above the button */
+}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
