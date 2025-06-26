@@ -41,9 +41,21 @@ header .container {
     align-items: center;
 }
 
+.logo-title-group {
+    display: flex;
+    align-items: center;
+}
+
+#header-logo {
+    height: 50px; /* Adjust as needed */
+    margin-right: 15px;
+}
+
 header h1 {
     margin: 0;
     font-size: 1.8rem;
+    /* If the logo image contains the name, this h1 can be hidden: */
+    /* display: none; */
 }
 
 header nav ul {
@@ -89,11 +101,42 @@ main section h2 {
     color: #333;
 }
 
-/* About Us Section */
-#about p {
+/* About Us Section / A Better Rebar Solution */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Spacing between text and image */
+}
+
+.about-text {
+    flex: 1; /* Text takes available space */
+}
+
+.about-text p {
     font-size: 1.1rem;
     margin-bottom: 20px;
     text-align: justify;
+}
+
+.about-image {
+    flex: 1; /* Image takes available space */
+    text-align: center; /* Center image if it's smaller than container */
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Optional: if you want rounded corners for this image */
+}
+
+/* Responsive adjustments for About section */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+    .about-image {
+        margin-top: 30px;
+    }
 }
 
 /* Gallery Section */
