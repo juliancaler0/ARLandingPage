@@ -106,6 +106,7 @@ main section h2 {
 /* About Us Section / A Better Rebar Solution */
 #about h2 { /* Override general section h2 styling */
     text-align: left;
+    margin-bottom: 20px; /* Reduced margin for tighter spacing to content */
 }
 
 .about-content {
