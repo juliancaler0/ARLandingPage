@@ -144,6 +144,10 @@ main section h2 {
 }
 
 /* Gallery Section */
+#gallery {
+    background-color: #f9f9f9;
+}
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -181,18 +185,94 @@ main section h2 {
 
 /* Footer */
 footer {
-    background: #333;
-    color: #fff;
+    background: #f9f9f9; /* Light gray background for alternation */
+    color: #333; /* Dark text for light background */
     text-align: center;
-    padding: 20px 0; /* Reduced padding for a smaller footer bar */
+    padding: 30px 0; /* Adjusted padding */
 }
 
 /* Removed footer h2 as it's no longer in the footer */
 
 footer p {
-    margin: 0; /* Remove default margins for a compact look */
-    font-size: 0.9rem; /* Slightly smaller font for copyright */
+    margin: 0;
+    font-size: 0.9rem;
 }
+
+/* Contact Form Styles */
+#contact p { /* For the introductory paragraph before the form */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    line-height: 1.5;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Gallery View All Button Styles */
+.gallery-view-all {
+    text-align: center;
+    margin-top: 40px; /* Space above the button */
+}
+
+.btn-secondary { /* Specific style for gallery button if different from primary */
+    background-color: #6c757d; /* A common secondary button color */
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
